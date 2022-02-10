@@ -23,5 +23,7 @@ searchUser.addEventListener('keyup', (e) =>{
                //show profite
            }
         })
+    }else{
+        //clear profile
     }
-})
+});

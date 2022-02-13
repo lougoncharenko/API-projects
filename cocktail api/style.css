@@ -22,7 +22,7 @@ html {
     max-width: 350px;
     text-align: center;
     padding: 30px 30px 12px 30px;
-    color: #fff;
+    color: #000;
     background-color: #00FFF5;
     border: 6px solid #00ADB5;
     border-radius: 5px;
@@ -46,5 +46,5 @@ html {
     font-size: 18px;
   }
   #cocktail li:not(:last-of-type) {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000;
   }

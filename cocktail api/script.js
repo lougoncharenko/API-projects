@@ -36,9 +36,28 @@ function displayDrink(data){
     //append it to the HTML div
     drinkDiv.appendChild(cocktailImg);
     //add styling to image
+
+    //add ingredients
+    const ingredients=document.createElement('ul')
+    drinkDiv.appendChild(ingredients);
+
+    const getIngredients=Object.keys(drink)
+    .filter((ingredient)=>{
+        return ingredient.indexOf('strIngredient') ==0;
+
+    })
+    .reduce((ingredients, ingredient) => {
+        if (drink[ingredient] != null) {
+            ingredients[ingredient] = drink[ingredient];
+          }
+          return ingredients;
+    }, {});
+
+    for(let key in getIngredients){
+        let value=getIngredients[key];
+        listItem=document.createElement('li');
+        listItem.innerHTML=value;
+        ingredients.appendChild(listItem);
+    }
    
-    
- 
-
-
 }

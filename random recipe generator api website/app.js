@@ -28,4 +28,38 @@ function displayRecipe(data){
     const recipeImg=document.createElement('img');
     recipeImg.src=recipe.strMealThumb;
     recipeDiv.appendChild(recipeImg);
+
+
+    //add ingredients
+    const ingredients=document.createElement('ul')
+   recipeDiv.appendChild(ingredients);
+
+    const getIngredients=Object.keys(recipe)
+    .filter((ingredient)=>{
+        return ingredient.indexOf('strIngredient') ==0;
+
+    })
+    .reduce((ingredients, ingredient) => {
+        if (recipe[ingredient] != null) {
+            ingredients[ingredient] = recipe[ingredient];
+          }
+          return ingredients;
+    }, {});
+
+    for(let key in getIngredients){
+        let value=getIngredients[key];
+        listItem=document.createElement('li');
+        listItem.innerHTML=value;
+        ingredients.appendChild(listItem);
+    }
+
+    //add instructions
+    const instructions=recipe.strInstructions;
+    const paragraph=document.createElement('p');
+    paragraph.innerHTML=instructions;
+    paragraph.style.size='20px';
+    recipeDiv.appendChild(paragraph);
+
+    
+   
 }

@@ -4,12 +4,12 @@ html {
   
   }
   body {
-    display: flex;
+     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-size: cover;
-    font-family: sans-serif;
+    /* height: 100%; */
+    
+    font-family: sans-serif; 
  
   }
   #overlay {
@@ -26,6 +26,7 @@ html {
   }
 
   #recipe{
+    margin-top: 50px;
     width: 25rem;
     text-align: center;
     padding: 30px 30px 12px 30px;

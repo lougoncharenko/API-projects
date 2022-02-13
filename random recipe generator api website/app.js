@@ -23,4 +23,9 @@ function displayRecipe(data){
     const title=document.createElement('h1')
     title.innerHTML=recipeName;
     recipeDiv.appendChild(title);
+
+    //add image
+    const recipeImg=document.createElement('img');
+    recipeImg.src=recipe.strMealThumb;
+    recipeDiv.appendChild(recipeImg);
 }

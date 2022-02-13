@@ -29,4 +29,16 @@ function displayDrink(data){
     //append it to the HTML div
     drinkDiv.appendChild(header);
 
+    //add an image
+    const cocktailImg = document.createElement("img");
+    //grab data of image from object
+    cocktailImg.src = drink.strDrinkThumb;
+    //append it to the HTML div
+    drinkDiv.appendChild(cocktailImg);
+    //add styling to image
+   
+    
+ 
+
+
 }

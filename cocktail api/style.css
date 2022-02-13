@@ -33,7 +33,7 @@ html {
   }
   #cocktail img {
     max-width: 300px;
-    border: 6px solid #fff;
+    border: 6px solid #000;
     border-radius: 150px;
   }
   #cocktail ul {

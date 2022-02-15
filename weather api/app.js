@@ -1,3 +1,12 @@
+document.getElementById('searchForm').addEventListener('submit', (e)=>{
+  const searchResults= document.getElementById("searchInput").value;
+  console.log(searchResults)
+  // console.log(e.value)
+  
+  e.preventDefault();
+})
+
+
 function getWeatherApi(city){
     // this.apikey=d71be756535b836342b5fa5e644f8f8e;
     
@@ -12,6 +21,8 @@ function getWeatherApi(city){
     .then(data => {console.log(data)})
     .catch(error => {console.log(error)});
 }
+
+
 
 //const searchResult = document.getElementById("searchResult");
 // const cityName = document.getElementById("cityName");
